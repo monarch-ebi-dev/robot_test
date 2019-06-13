@@ -1,0 +1,6 @@
+term
+http://www.w3.org/2002/07/owl#Ontology
+http://purl.obolibrary.org/obo/myont/imports/pato_import.owl
+http://www.w3.org/2002/07/owl#Class
+http://purl.obolibrary.org/obo/myont.owl
+http://purl.obolibrary.org/obo/MYONT_00000000
