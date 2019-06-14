@@ -25,5 +25,8 @@ works_seed_by_entity_type:
 
 cl_seed_test: fail_seed_by_entity_type_cl.txt works_seed_by_entity_type_cl.txt
 
+fail_remove2:
+	robot remove --term-file non_native_classes.txt -i test-basic.owl -o test-o-basic.owl
+
 fail_remove:
 	robot -vv remove -I http://purl.obolibrary.org/obo/cl.owl --term rdfs:label --select complement --select annotation-properties -o cl_test.owl
