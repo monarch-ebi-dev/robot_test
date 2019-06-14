@@ -1,0 +1,22 @@
+Prefix(:=<http://purl.obolibrary.org/obo/cl.owl/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/cl.owl>
+
+Declaration(Class(obo:X_0000000))
+
+############################
+#   Classes
+############################
+
+# Class: obo:X_0000000 (Test class)
+
+SubClassOf(obo:X_0000000 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0001017))
+)
