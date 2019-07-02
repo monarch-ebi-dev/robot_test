@@ -1,0 +1,45 @@
+Prefix(:=<http://www.semanticweb.org/matentzn/ontologies/2019/5/untitled-ontology-689#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/matentzn/ontologies/2019/5/untitled-ontology-689>
+
+Declaration(Class(<http://www.purl.obolibrary.org/obo/ZP_0099004>))
+Declaration(Class(<http://www.purl.obolibrary.org/obo/ZP_0099005>))
+Declaration(Class(<http://www.purl.obolibrary.org/obo/ZP_0099007>))
+Declaration(ObjectProperty(<http://www.purl.obolibrary.org/obo/ZP_0099006>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.purl.obolibrary.org/obo/ZP_0099006> (R)
+
+AnnotationAssertion(rdfs:label <http://www.purl.obolibrary.org/obo/ZP_0099006> "R"@en)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.purl.obolibrary.org/obo/ZP_0099004> (A)
+
+AnnotationAssertion(rdfs:label <http://www.purl.obolibrary.org/obo/ZP_0099004> "A"@en)
+
+# Class: <http://www.purl.obolibrary.org/obo/ZP_0099005> (B)
+
+AnnotationAssertion(rdfs:label <http://www.purl.obolibrary.org/obo/ZP_0099005> "B"@en)
+SubClassOf(<http://www.purl.obolibrary.org/obo/ZP_0099005> <http://www.purl.obolibrary.org/obo/ZP_0099004>)
+SubClassOf(<http://www.purl.obolibrary.org/obo/ZP_0099005> ObjectSomeValuesFrom(<http://www.purl.obolibrary.org/obo/ZP_0099006> <http://www.purl.obolibrary.org/obo/ZP_0099007>))
+
+# Class: <http://www.purl.obolibrary.org/obo/ZP_0099007> (C)
+
+AnnotationAssertion(rdfs:label <http://www.purl.obolibrary.org/obo/ZP_0099007> "C"@en)
+
+
+)

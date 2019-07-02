@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="http://purl.obolibrary.org/obo/cl/test-basic.owl" uri="test-basic.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="duplicate:http://purl.obolibrary.org/obo/fbbt/fbbt-simple.owl" uri="o_remove.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="duplicate:http://purl.obolibrary.org/obo/fbbt/fbbt-simple.owl" uri="remove_termfile_test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="http://purl.obolibrary.org/obo/myont/tmp/logical_dependencies_merged.owl" uri="logical_dependencies_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="duplicate:http://www.semanticweb.org/matentzn/ontologies/2019/5/untitled-ontology-689" uri="fail_trim_anonymous.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="duplicate:http://www.semanticweb.org/matentzn/ontologies/2019/5/untitled-ontology-689" uri="fail_trim_anonymous_parents.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="duplicate:http://www.semanticweb.org/matentzn/ontologies/2019/5/untitled-ontology-689" uri="fail_trim_anonymous_owl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="http://www.semanticweb.org/matentzn/test-extract.owl" uri="asubb.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1562057480432" name="http://www.semanticweb.org/matentzn/test-extract-imp.owl" uri="asubbimp.owl"/>
+    </group>
+</catalog>

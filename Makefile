@@ -30,3 +30,23 @@ fail_remove2:
 
 fail_remove:
 	robot -vv remove -I http://purl.obolibrary.org/obo/cl.owl --term rdfs:label --select complement --select annotation-properties -o cl_test.owl
+
+fail_trim_anonymous:
+	echo "Test shows that I cant get axioms with anonymous expressions even if all entities are in my filter."
+	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select.txt --trim true --select "self annotations anonymous" --preserve-structure false --output $@.owl
+
+fail_trim_anonymous_owl:
+	echo "Test shows that even after adding all owl classes, I still dont get the anonymous restriction."
+	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select-owl.txt --trim true --select "self annotations anonymous" --compare named --preserve-structure false --output $@.owl
+	
+fail_extract_import.owl:
+	robot extract -i asubbimp.owl --term "http://www.purl.obolibrary.org/test/C" --method BOT --output $@
+
+fail_extract_import_exclude.owl:
+	robot extract -i asubbimp.owl --term "http://www.purl.obolibrary.org/test/C" --imports exclude --method BOT --output $@
+
+test_extract_import_exclude: fail_extract_import.owl fail_extract_import_exclude.owl
+	
+fail_trim_anonymous_parents:
+	echo "Test shows that by adding parents, you get A, which I dont want."
+	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select.txt --trim true --select "self annotations anonymous parents" --preserve-structure false --output $@.owl

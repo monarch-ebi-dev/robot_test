@@ -1,0 +1,7 @@
+http://www.purl.obolibrary.org/obo/ZP_0099005
+http://www.purl.obolibrary.org/obo/ZP_0099007
+http://www.purl.obolibrary.org/obo/ZP_0099006
+rdf:type
+owl:Restriction
+owl:onProperty
+owl:someValuesFrom
