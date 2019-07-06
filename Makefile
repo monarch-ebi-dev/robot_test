@@ -47,6 +47,10 @@ fail_extract_import_exclude.owl:
 
 test_extract_import_exclude: fail_extract_import.owl fail_extract_import_exclude.owl
 	
+fail-remove-filter.owl:
+	robot remove --input input-fail-remove-filter.owl --axioms equivalent \
+		filter --term-file simple_seed.txt --trim true --signature true --output $@
+
 fail_trim_anonymous_parents:
 	echo "Test shows that by adding parents, you get A, which I dont want."
 	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select.txt --trim true --select "self annotations anonymous parents" --preserve-structure false --output $@.owl
