@@ -56,4 +56,4 @@ fail_trim_anonymous_parents:
 	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select.txt --trim true --select "self annotations anonymous parents" --preserve-structure false --output $@.owl
 	
 fail_remove_definitions:
-	robot remove --input o.owl --term-file simple-rm.txt --axioms annotation --trim false -o $@.owl
+	robot remove --input o.owl --term-file simple-rm.txt --axioms annotation --trim false --signature true -o $@.owl
