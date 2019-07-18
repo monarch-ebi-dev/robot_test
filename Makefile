@@ -57,3 +57,6 @@ fail_trim_anonymous_parents:
 	
 fail_remove_definitions:
 	robot remove --input o.owl --term-file simple-rm.txt --axioms annotation --trim false --signature true -o $@.owl
+	
+fail_abc_eq:
+	robot relax -i abc.owl remove --axioms equivalent remove --term http://www.purl.obolibrary.org/obo/ZP_0099004 -o $@.owl
