@@ -60,3 +60,6 @@ fail_remove_definitions:
 	
 fail_abc_eq:
 	robot relax -i abc.owl remove --axioms equivalent remove --term http://www.purl.obolibrary.org/obo/ZP_0099004 -o $@.owl
+	
+fail_2eq:
+	robot reason -i 2eq.owl --equivalent-classes-allowed asserted-only -o $@.owl
