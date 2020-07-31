@@ -1,3 +1,5 @@
+OBOPURL=http://purl.obolibrary.org/obo
+
 fail_extract:
 	robot -vv extract -i logical_dependencies_merged.owl --term-file src_seed.txt --method BOT --force true -o $@.mod.owl
 	
@@ -56,10 +58,34 @@ fail_trim_anonymous_parents:
 	robot filter -i trim-true-anonymous.owl --term-file terms-trim-select.txt --trim true --select "self annotations anonymous parents" --preserve-structure false --output $@.owl
 	
 fail_remove_definitions:
-	robot remove --input o.owl --term-file simple-rm.txt --axioms annotation --trim false --signature true -o $@.owl
+	./robot remove --input o.owl --term-file simple-rm.txt --axioms annotation --trim false --preserve-structure false --signature true -o $@.owl
 	
 fail_abc_eq:
-	robot relax -i abc.owl remove --axioms equivalent remove --term http://www.purl.obolibrary.org/obo/ZP_0099004 -o $@.owl
+	./robot relax -i abc.owl remove --axioms equivalent remove --term http://www.purl.obolibrary.org/obo/ZP_0099004 -o $@.owl
 	
 fail_2eq:
-	robot reason -i 2eq.owl --equivalent-classes-allowed asserted-only -o $@.owl
+	./robot reason -i 2eq.owl --equivalent-classes-allowed asserted-only -o $@.owl
+	
+test_base: otest_base.owl
+	./robot --version
+	./robot remove --input $< --base-iri FBcv --axioms external -p false -o $@_int.owl
+	./robot remove --input $< --base-iri FBcv --axioms internal -p false -o $@_ext.owl
+	./robot merge -i $@_ext.owl -i $@_int.owl -o $@_merged.owl
+	./robot diff --left $@_merged.owl --right $< -o $@_diff.txt
+
+mp.owl:
+	./robot merge -I $(OBOPURL)/mp.owl -o $@	
+
+test_foreign_axiom: mp.owl
+	./robot --version
+	./robot remove -i $< --base-iri MP --base-iri http://purl.obolibrary.org/obo/mp/ --axioms external -p false -o $@_int.owl
+	./robot remove -i $< --base-iri MP --base-iri http://purl.obolibrary.org/obo/mp/ --axioms internal -p false -o $@_ext.owl
+	./robot merge -i $@_ext.owl -i $@_int.owl -o $@_merged.owl
+	./robot diff --left $@_merged.owl --right $< -o $@_diff.txt
+	
+PATO=https://raw.githubusercontent.com/pato-ontology/pato/master/pato.obo
+	
+test_pato_roundtrip:
+	./robot merge -I $(PATO) \
+		convert -o $@.owl
+	./robot convert -i $@.owl -f obo --check false -o $@.obo
