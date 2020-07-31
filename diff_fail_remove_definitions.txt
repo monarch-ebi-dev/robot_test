@@ -1,0 +1,27 @@
+210d209
+<         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in thermotaxis (GO:0043052). &apos;thermotaxis&apos; is defined as: &apos;$sub_GO:0043052&apos;</obo:IAO_0000115>
+216,221d214
+<     <owl:Axiom>
+<         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000002"/>
+<         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+<         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in thermotaxis (GO:0043052). &apos;thermotaxis&apos; is defined as: &apos;$sub_GO:0043052&apos;</owl:annotatedTarget>
+<         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
+<     </owl:Axiom>
+298d290
+<         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in dorsal/ventral axis specification (GO:0009950). &apos;dorsal/ventral axis specification&apos; is defined as: &apos;$sub_GO:0009950&apos;</obo:IAO_0000115>
+306,311d297
+<         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+<         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in dorsal/ventral axis specification (GO:0009950). &apos;dorsal/ventral axis specification&apos; is defined as: &apos;$sub_GO:0009950&apos;</owl:annotatedTarget>
+<         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
+<     </owl:Axiom>
+<     <owl:Axiom>
+<         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000324"/>
+1044d1029
+<         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in aging (GO:0007568). &apos;aging&apos; is defined as: &apos;$sub_GO:0007568&apos;</obo:IAO_0000115>
+1050,1055d1034
+<     <owl:Axiom>
+<         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000384"/>
+<         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+<         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in aging (GO:0007568). &apos;aging&apos; is defined as: &apos;$sub_GO:0007568&apos;</owl:annotatedTarget>
+<         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:PO_curators</oboInOwl:hasDbXref>
+<     </owl:Axiom>
